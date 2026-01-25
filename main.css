@@ -1,49 +1,84 @@
 :root {
-    --primary: #2e8b57;
-    --primary-light: #e0f2e9;
-    --bg: #6cd48f;
-    --text-light: white;
-    --text-dark: black;
+    --primary: #1e3a8a;
+    --primary-light: #dbeafe;
+    --bg: #f8fafc;
+    --card-bg: white;
+    --text-dark: #1e293b;
+    --text-gray: #64748b;
+    --border: #e2e8f0;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
+    color: var(--text-dark);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-header,
-footer {
-    background-color: var(--primary);
-    color: var(--text-light);
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    padding: 10px;
-}
-
-nav {
-    background-color: var(--primary-light);
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    margin: 10px;
-    text-decoration: none;
+h1 {
     color: var(--primary);
-    font-weight: bold;
-    transition: color 0.2s;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-nav a:hover {
+strong {
+    color: var(--primary);
+    font-size: 1.2em;
+}
+
+/* Content containers */
+div {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Images */
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Paragraphs */
+p {
+    margin: 15px 0;
     color: var(--text-dark);
 }
 
-section {
-    padding: 20px;
+/* Links */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
+a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+/* Source section */
+div[style*="text-align: left"] {
+    background-color: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    margin-top: 40px;
+}
+
+div[style*="text-align: left"] p {
+    color: var(--text-gray);
+    font-size: 0.9em;
+}
