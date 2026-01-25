@@ -1,7 +1,7 @@
 :root {
     --primary: #2e8b57;
     --primary-light: #e0f2e9;
-    --bg: #f4fff8;
+    --bg: #6cd48f;
     --text-light: white;
     --text-dark: black;
 }
@@ -46,3 +46,4 @@ nav a:hover {
 section {
     padding: 20px;
 }
+
