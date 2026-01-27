@@ -148,7 +148,9 @@ body {
     align-items: flex-start;
     gap: 10px;
     color: var(--gray);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     opacity: 0;
     animation: fadeInUp 1.2s ease 0.8s forwards;
 }
@@ -287,20 +289,6 @@ body {
     color: var(--white);
 }
 
-/* Minimalist animations on scroll */
-@media (prefers-reduced-motion: no-preference) {
-    .card-content {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    
-    .component-card.visible .card-content {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
     .card-body {
@@ -338,19 +326,26 @@ body {
     
     .scroll-indicator {
         left: 30px;
+        bottom: 40px;
     }
     
     .component-card {
         padding: 80px 30px;
+        min-height: auto;
+    }
+    
+    .card-header {
+        margin-bottom: 40px;
     }
     
     .card-header h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .card-text p {
         font-size: 0.95rem;
         line-height: 1.8;
+        margin-bottom: 20px;
     }
     
     .main-footer {
